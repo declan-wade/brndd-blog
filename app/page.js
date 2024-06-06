@@ -17,7 +17,8 @@ export default async function Page() {
     <div>
       <main className={styles.container}>
         <header className={styles.header}>
-          <p>Hear more about the BRNDD community and what we`&apos;`re working on</p>
+          <div className="font-logo">BRNDD BLOG</div>
+          <p>Hear more about the BRNDD community and what we&apos;re working on</p>
         </header>
 
         <h2 className={styles.heading}>All Posts</h2>
@@ -39,7 +40,7 @@ export default async function Page() {
                     <Text title={post.properties?.Title?.title} />
                   </Link>
                 </h3>
-
+                <p className={styles.postDescription}>{post.properties?.Description?.rich_text[0].text.content}</p>
                 <p className={styles.postDescription}>{date}</p>
                 <Link href={`/article/${slug}`}>Read post →</Link>
               </li>
