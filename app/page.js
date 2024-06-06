@@ -1,9 +1,10 @@
-import Link from 'next/link';
-import { getDatabase } from '../lib/notion';
-import Text from '../components/text';
-import styles from './index.module.css';
+import Link from "next/link";
+import { getDatabase } from "../lib/notion";
+import Text from "../components/text";
+import styles from "./index.module.css";
 
-export const databaseId = process.env?.NOTION_DATABASE_ID ?? 'NOTION_DATABASE_ID';
+export const databaseId =
+  process.env?.NOTION_DATABASE_ID ?? "NOTION_DATABASE_ID";
 
 async function getPosts() {
   const database = await getDatabase();
@@ -17,21 +18,19 @@ export default async function Page() {
     <div>
       <main className={styles.container}>
         <header className={styles.header}>
-          <p>
-          Hear more about the BRNDD community and what we're working on
-          </p>
+          <p>Hear more about the BRNDD community and what we`&apos;`re working on</p>
         </header>
 
         <h2 className={styles.heading}>All Posts</h2>
         <ol className={styles.posts}>
           {posts.map((post) => {
             const date = new Date(post.last_edited_time).toLocaleString(
-              'en-US',
+              "en-US",
               {
-                month: 'short',
-                day: '2-digit',
-                year: 'numeric',
-              },
+                month: "short",
+                day: "2-digit",
+                year: "numeric",
+              }
             );
             const slug = post.properties?.Slug?.rich_text[0].text.content;
             return (
