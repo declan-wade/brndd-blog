@@ -30,6 +30,7 @@ module.exports = {
   },
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'max-len': 'off',
     'react/jsx-props-no-spreading': [1, {
       custom: 'ignore',
     }],
