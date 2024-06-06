@@ -11,9 +11,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <header className={styles.logos}>
-        <p className='font-logo'>BRNDD BLOG</p>
+        <p className="font-logo">BRNDD BLOG</p>
       </header>
       <body className={inter.className}>{children}</body>
     </html>
